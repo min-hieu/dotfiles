@@ -9,20 +9,20 @@ window:
   dynamic_padding: false
   padding:
     x: 12
-    y: 9 
+    y: 9
 
 font:
   normal:
-    family: Menlo
+    family: RobotoMono Nerd Font
 
   # Italic font face
   bold:
-    family: Menlo
+    family: RobotoMono Nerd Font
     style: Bold
 
   # Italic font face
   italic:
-    family: Menlo
+    family: RobotoMono Nerd Font
     style: Italic
 
   # Point size
@@ -87,9 +87,9 @@ key_bindings:
   # Change to the previous tmux window
   - { key: LBracket, mods: Command|Shift, chars: "\x02\x70" }
   # Split the current pane into two, left and right
-  - { key: N, mods: Command, chars: "\x02\x25" }
+  - { key: Backslash, mods: Command|Shift, chars: "\x02\x25" }
   # Split the current pane into two, top and bottom.
-  - { key: N, mods: Command|Shift, chars: "\x02\x22" }
+  - { key: Minus, mods: Command|Shift, chars: "\x02\x22" }
   # Detach the current tmux client
   - { key: Q, mods: Command, chars: "\x02\x64" }
   # Change to the next tmux window
