@@ -13,13 +13,20 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
+
+  -- Aesthetics
   use 'ellisonleao/gruvbox.nvim'
+  use('nvim-tree/nvim-web-devicons')
 
   use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
   use('nvim-treesitter/playground')
-  use('theprimeagen/harpoon')
-  use('mbbill/undotree')
+  use({'nvim-tree/nvim-tree.lua', tag = 'nightly'})
+
   use('tpope/vim-fugitive')
+  use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.0',
+      requires = { {'nvim-lua/plenary.nvim'} }
+  }
 
   use {
     'VonHeikemen/lsp-zero.nvim',
@@ -44,6 +51,10 @@ return require('packer').startup(function(use)
   }
 
   use("folke/zen-mode.nvim")
+
+  -- Debugging
+  use 'mfussenegger/nvim-dap'
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 
   if packer_bootstrap then
     require('packer').sync()

@@ -1,7 +1,7 @@
-require("charlie.plugconfig")
-require("charlie.packer")
 require("charlie.set")
 require("charlie.remap")
+require("charlie.packer")
+require("charlie.config")
 
 local augroup = vim.api.nvim_create_augroup
 local CharlieGroup = augroup('LieGroup', {})

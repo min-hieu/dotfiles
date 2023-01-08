@@ -1,0 +1,5 @@
+require("charlie.config.gruvbox")
+require("charlie.config.treesitter")
+require("charlie.config.fugitive")
+require("charlie.config.telescope")
+require("charlie.config.lsp")
