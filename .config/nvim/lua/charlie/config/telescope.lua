@@ -1,0 +1,6 @@
+local tele = require('telescope.builtin')
+vim.keymap.set('n', '<leader>pf', tele.find_files, {})
+vim.keymap.set('n', '<C-p>', tele.git_files, {})
+vim.keymap.set('n', '<leader>ps', function()
+    tele.grep_string({ search = vim.fn.input("Grep > ") })
+end)
